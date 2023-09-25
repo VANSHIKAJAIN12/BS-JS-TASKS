@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS TASK 4</title>
+  </head>
+  <body>
+    <h3>DATE AND TIME</h3>
+    <table>
+      <tr>
+        <td><button onclick="date()">Show Date</button></td>
+      </tr>
+      <tr>
+        <td><p id="showDate"></p></td>
+      </tr>
+      <tr>
+        <td><button onclick="time()">Show Time</button></td>
+      </tr>
+      <tr>
+        <td><p id="showTime"></p></td>
+      </tr>
+    </table>
+    <script>
+      function date() {
+        const currentDate = new Date();
+        const dateString = currentDate.toDateString();
+        document.getElementById("showDate").textContent = dateString;
+      }
+      function time() {
+        const currentTime = new Date();
+        const timeString = currentTime.toLocaleTimeString();
+        document.getElementById("showTime").textContent = timeString;
+      }
+    </script>
+  </body>
+</html>
